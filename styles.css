@@ -244,13 +244,11 @@ img {
 @media screen and (max-width: 1024px) {
     .project-card {
         width: calc(50% - 20px);
-
     }
 }
 @media screen and (max-widtH: 787px) {
     .project-card {
         width: calc(100% - 20px);
-
     }
 }
 #skills {
@@ -268,6 +266,16 @@ img {
     width: calc(20% - 30px);
     margin: 0 15px;
     filter: grayscale();
+}
+@media screen and (max-width: 1024px) {
+    .wrapper > img {
+        width: calc(50% - 30px);
+    }
+}
+@media screen and (max-widtH: 787px) {
+    .wrapper > img {
+        width: calc(100% - 30px);
+    }
 }
 #contact {
     width: 100%;
@@ -296,4 +304,7 @@ img {
 }
 .footer-socials > a > svg {
     width: 40px;
+}
+.footer-socials > a > svg path {
+    fill: white;
 }
