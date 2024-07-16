@@ -241,6 +241,18 @@ img {
 .project-card:hover > .hover-overlay {
     opacity: 1;
 }
+@media screen and (max-width: 1024px) {
+    .project-card {
+        width: calc(50% - 20px);
+
+    }
+}
+@media screen and (max-widtH: 787px) {
+    .project-card {
+        width: calc(100% - 20px);
+
+    }
+}
 #skills {
     width: 100%;
     display: flex;
@@ -272,6 +284,7 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: white;
 }
 .footer-socials {
     display: flex;
