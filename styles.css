@@ -73,6 +73,9 @@ img {
 #nav > ul > li {
     margin-left: 32px;
 }
+#nav > .btn {
+    margin-left: 32px;
+}
 #banner {
     width: 100%;
     display: flex;
@@ -327,47 +330,69 @@ img {
     transform: translateY(0);
   } */
 
-  #hamburger-menu {
-    overflow: hidden;
-    height: 40px;
-    width: 40px;
-    display: flex;
+  #hamburger {
+    position: relative;
+    display: none;
+    justify-content: center;
     align-items: center;
+    width: 80px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 100px;
+    background-color: #c44b4b;
+    box-sizing: border-box;
+    padding: 0;
   }
+  
   .burger-line {
-    width: 40px;
-    height: 4px;
-    background: #40beb6;
+    width: 30px;
+    height: 3px;
+    background: #fff;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
+    display: flex;
   }
+  
   .burger-line::before,
   .burger-line::after {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 4px;
-    background: #40beb6;
+    width: 30px;
+    height: 3px;
+    background: #fff;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
   }
+  
   .burger-line::before {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
   }
+  
   .burger-line::after {
-    transform: translateY(12px);
+    transform: translateY(8px);
   }
-  #hamburger-menu.open-burger .burger-line {
-    transform: translateX(50px);
+  #hamburger.open {
+    background-color: var(--hover);
+  }
+  #hamburger.open .burger-line {
+    transform: translateX(43px);
     background: transparent;
   }
-  #hamburger-menu.open-burger .burger-line::before {
-    transform: rotate(45deg) translate(-35px, 35px);
+  
+  #hamburger.open .burger-line::before {
+    transform: rotate(45deg) translate(-30px, 30px);
   }
-  #hamburger-menu.open-burger .burger-line::after {
-    transform: rotate(-45deg) translate(-35px, -35px);
+  
+  #hamburger.open .burger-line::after {
+    transform: rotate(-45deg) translate(-30px, -30px);
   }
-
+@media screen and (max-width: 1024px) {
+    #hamburger {
+        display: flex;
+    }
+}
   .teal-btn,
 .gform_button,
 .gform_next_button {
