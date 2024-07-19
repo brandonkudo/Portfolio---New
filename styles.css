@@ -75,6 +75,7 @@ img {
 }
 .header-container > h3 {
     margin: 0;
+    font-size: 32px !important;
 }
 #nav {
     display: flex;
@@ -404,6 +405,9 @@ img {
     }
 }
 @media screen and (max-widtH: 787px) {
+    .hide-mobile {
+        display: none;
+    }
     .project-card {
         width: calc(100% - 20px);
     }
